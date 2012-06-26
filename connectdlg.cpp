@@ -19,7 +19,7 @@ ConnectDlg::ConnectDlg(QWidget *parent) :
     host->setText("localhost");
     host->setMaxLength(255);
     port->setText("6379");
-    port->setValidator(new QIntValidator(0, 32768, this));
+    port->setValidator(new QIntValidator(0, 0xffff, this));
     dbNumber->setText("0");
     dbNumber->setValidator(new QIntValidator(0, 255, this));
     prefix->setText("");
